@@ -41,7 +41,7 @@ def predict(dataloader, model):
 
 def plot_result(preds, labels, images):
   '''
-  Display 8 images along with labels and predictions
+  Display 5 images along with labels and predictions
           Args:
               preds (np array): array of predicted classes
               labels (np array): array of actual classes
@@ -50,6 +50,6 @@ def plot_result(preds, labels, images):
   '''
   # set the title of the plot
   title = ""
-  for ii in range(8):
-      title = title + 9 * "-" + " {}({}) ".format(preds[ii], labels[ii]) + 9 * "-"
-  imshow_(torchvision.utils.make_grid(images[:8]),ax =(16,6), title=title )
+  for ii in range(5):
+      title = title + 3 * "-" + " {}({}) ".format(preds[ii], labels[ii]) + 3 * "-"
+  imshow_(torchvision.utils.make_grid(images[:5]),ax =(16,6), title=title )
